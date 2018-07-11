@@ -1,0 +1,183 @@
+﻿<Page
+    x:Class="Gomuku.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Gomuku"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Width="800" Height="480" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0" Width="160" Height="480" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <TextBlock x:Name="TextB" HorizontalAlignment="Center" />
+            <StackPanel Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Padding="10">
+                    电脑难度
+                </TextBlock>
+                <ComboBox Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="Comb">
+                    <ComboBoxItem>
+                        简单
+                    </ComboBoxItem>
+                    <ComboBoxItem>
+                        中等
+                    </ComboBoxItem>
+                    <ComboBoxItem>
+                        困难
+                    </ComboBoxItem>
+                </ComboBox>
+            </StackPanel>
+
+            <Button HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Background="#FF008BFF" BorderBrush="Gray" BorderThickness="0.1" Click="ClickBack" >
+                悔棋
+            </Button>
+
+        </Grid>
+
+        <Canvas Grid.Column="1" x:Name="LineBoard" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="480" Height="480" />
+        <Grid Grid.Column="1" x:Name="ListBoard" Width="480" Height="480" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="15"/>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="30"/>
+
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="30"/>
+
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="30"/>
+
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="30"/>
+
+                <ColumnDefinition Width="15"/>
+
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="15" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+
+                <RowDefinition Height="15" />
+
+            </Grid.RowDefinitions>
+        </Grid>
+        <Grid Grid.Column="1" x:Name="ChessBoard" Width="480" Height="480" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="15"/>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="30"/>
+
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="30"/>
+
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="30"/>
+
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="30"/>
+
+                <ColumnDefinition Width="15"/>
+                
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="15" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                
+                <RowDefinition Height="15" />
+                
+            </Grid.RowDefinitions>
+        </Grid>
+
+        <Grid Grid.Column="2" Height="480" Width="160" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
+                <TextBlock Margin="10" >
+                    电脑执子:
+                </TextBlock>
+                <Ellipse Stroke="Black" Width="30" Height="30" />
+            </StackPanel>
+
+            <StackPanel Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
+                <TextBlock Margin="10" >
+                    玩家执子:
+                </TextBlock>
+                <Ellipse Fill="Black" Width="30" Height="30" />
+            </StackPanel>
+
+            <Button HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Background="#FF008BFF" BorderBrush="Gray" BorderThickness="0.1" Click="Restart" >
+                重新开始
+            </Button>
+
+            
+        </Grid>
+        
+    </Grid>
+</Page>
